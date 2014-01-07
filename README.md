@@ -15,8 +15,8 @@ Usage:
 ---------
 ```Batchfile
 vagrant plugin install vagrant-vbguest
-git clone https://github.com/hak8or/Vagrant_Nginx_Rails_Postgres_box.git
-cd Vagrant_Nginx_Rails_Postgres_box
+git clone git://github.com/hak8or/Vagrant_Baboon.git
+cd git clone git://github.com/hak8or/Vagrant_Baboon.git
 vagrant up # Now we wait ...
 vagrant ssh
 ```
