@@ -21,7 +21,7 @@ vagrant up # Now we wait ...
 vagrant ssh
 ```
 
-Feel free to give the Vagrant_Nginx_Rails_Postgres_box folder a much more resonable name and move it where you wish. Your information will be shown in the terminal once your box has been set up.
+Feel free to rename the Vagrant_Baboon folder and move it where you wish. Your information will be shown in the terminal once your box has been set up.
 
 Troubleshooting
 ---------------
