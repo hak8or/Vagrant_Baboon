@@ -16,7 +16,7 @@ Usage:
 ```Batchfile
 vagrant plugin install vagrant-vbguest
 git clone git://github.com/hak8or/Vagrant_Baboon.git
-cd git clone git://github.com/hak8or/Vagrant_Baboon.git
+cd Vagrant_Baboon
 vagrant up # Now we wait ...
 vagrant ssh
 ```
@@ -35,7 +35,7 @@ config.vm.network :forwarded_port, guest: 1337, host: 1337
 ```
 
 ##### Some crazy errors are popping up in the terminal when running your script!
-Chances are that some updated version was released for Phusion or an update broke something. Let me know either here or on the [page] (https://github.com/hak8or/nginx-passenger-postgres-rails-setup-script) the script came from.
+Chances are that some updated version was released for Phusion or an update broke something. Let me know either here or on the [page] (https://github.com/hak8or/nginx-passenger-postgres-rails-setup-script) the script came from. You can also check the script log in config.log in the folder where the script ran from, which should be the home directory.
 
 Possible future enhancements
 ----------------------------
