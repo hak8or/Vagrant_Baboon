@@ -27,6 +27,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # Port 1337 is the port used by nginx instead of the default port 80.
     config.vm.network :forwarded_port, guest: 1337, host: 1337
 
+    # Port 3000 used by rails test server forwarded to 3000.
+    config.vm.network :forwarded_port, guest: 3000, host: 3000
+
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
   # config.vm.network :private_network, ip: "192.168.33.10"
@@ -47,8 +50,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # config.vm.synced_folder "../data", "/vagrant_data"
 
     # Sharing of the demo_rails_app folder where the rails application lives in
-    # so you can edit it much easier using sublime text or whatever you use. 
-    # It shows itself to your OS as a normal folder, so any tools you use will 
+    # so you can edit it much easier using sublime text or whatever you use.
+    # It shows itself to your OS as a normal folder, so any tools you use will
     # treat it the same.
     config.vm.synced_folder "vagrant_share", "/home/vagrant/demo_rails_app"
 
@@ -132,7 +135,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   chef.validation_client_name = "ORGNAME-validator"
 
     # Fetches and then runs a script to get my web development enviorment up
-    # and running. While the script could just be included next to this 
+    # and running. While the script could just be included next to this
     # vagrant file, I set it to be downloaded from my github repo instead
     # as I am updated the script often.
     config.vm.provision "shell", path: "https://raw.github.com/hak8or/nginx-passenger-postgres-rails-setup-script/master/config.sh", :args => "vagrant"
