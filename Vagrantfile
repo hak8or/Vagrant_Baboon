@@ -134,9 +134,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #
   #   chef.validation_client_name = "ORGNAME-validator"
 
-    # Fetches and then runs a script to get my web development enviorment up
-    # and running. While the script could just be included next to this
-    # vagrant file, I set it to be downloaded from my github repo instead
-    # as I am updated the script often.
-    config.vm.provision "shell", path: "https://raw.github.com/hak8or/nginx-passenger-postgres-rails-setup-script/master/config.sh", :args => "vagrant"
+    # Runs a script to download other scripts to get my web development enviorment up
+    # and running with the cryptos demo site. The other scripts are downloaded instead
+    # of just stores here because they exist in other projects and are often updated.
+    config.vm.provision "shell", path: "provision.sh"
 end
